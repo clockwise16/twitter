@@ -1,0 +1,18 @@
+<h2 class="kb">가입 정보</h2>
+<table>
+    <tr display:inline-block;>
+        <th>번호</th>
+        <th>이메일</th>
+        <th>비밀번호</th>
+        <th>작성시간</th>
+    </tr>
+
+    <% @users.each do |u| %>
+    <tr>
+        <td><%= u.id %></td>
+        <td><%= u.email %></td>
+        <td><%= u.password %></td>
+        <td><%= u.created_at %></td>
+    </tr>
+    <% end %>
+</table>

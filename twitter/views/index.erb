@@ -1,0 +1,19 @@
+<div class="jumbotron">
+        
+        <h1 class="kb">트위터</h1>
+        <form action='/create'>
+            <!--<% unless session[:email] %>-->
+            <!--<p><input type='hidden' name='name' value="<%= session[:email]%>" placeholder=" Username"></p>-->
+            <!--<% end %>-->
+            <p><textarea style="resize: none;" type='text' name='content' rows="4" cols="50" placeholder=" 280자 내로 작성해주세요."></textarea></p>
+                    
+            <input type='submit'>
+        </form>
+</div>
+
+<% @tweet.reverse.each do |t| %>
+    <p>번호 : <%= t.id %> <br>
+        이름 : <%= t.name %> <br>
+        내용 : <%= t.content %> <br>
+        작성시간 : <%= t.created_at %></p>
+<% end %>
