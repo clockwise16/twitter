@@ -1,0 +1,19 @@
+<h1>관리자</h1>
+<table>
+    <tr>
+        <th>번호</th>
+        <th>이메일</th>
+        <th>비밀번호</th>
+    </tr>
+    
+    
+    <% @users.each do |u| %>
+    <tr>
+        <th> <%= u.id %> </th>
+        <th> <%= u.email %> </th>
+        <th> <%= u.password %> </th>
+    </tr>
+    <% end %>
+    
+
+</table>

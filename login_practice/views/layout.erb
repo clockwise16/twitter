@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+        <a href='/'>홈으로</a>
+        <a href='/signup'>회원가입</a>
+        <a href='/login'>로그인</a>
+        <%= session[:email] %>
+        <%= yield %>
+    </body>
+</html>
